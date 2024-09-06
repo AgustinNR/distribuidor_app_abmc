@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo Modelo &mdash; documentación de DistribuidorApp - 0.0.1</title>
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+  <script src="_static/jquery.js?v=5d32c60e"></script>
+  <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+  <script src="_static/documentation_options.js?v=6fcc102b"></script>
+  <script src="_static/doctools.js?v=888ff710"></script>
+  <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+  <script src="_static/translations.js?v=efdbd0b9"></script>
+  <script src="_static/js/theme.js"></script>
+  <link rel="index" title="Índice" href="genindex.html" />
+  <link rel="search" title="Búsqueda" href="search.html" />
+  <link rel="next" title="validar module" href="validar.html" />
+  <link rel="prev" title="main module" href="main.html" />
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+
+
+
+          <a href="index.html" class="icon icon-home">
+            DistribuidorApp
+          </a>
+          <div class="version">
+            0.0.1
+          </div>
+          <div role="search">
+            <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+              <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+          </div>
+        </div>
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+          <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+          <ul class="current">
+            <li class="toctree-l1"><a class="reference internal" href="controller.html">Módulo Controller</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="main.html">Módulo Main</a></li>
+            <li class="toctree-l1 current"><a class="current reference internal" href="#">Módulo Modelo</a>
+              <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#clase-abmc">Clase Abmc</a>
+                  <ul>
+                    <li class="toctree-l3"><a class="reference internal" href="#metodos-de-la-clase-abmc">Métodos de la
+                        Clase Abmc</a>
+                      <ul>
+                        <li class="toctree-l4"><a class="reference internal" href="#modelo.Abmc"><code
+                              class="docutils literal notranslate"><span class="pre">Abmc</span></code></a></li>
+                        <li class="toctree-l4"><a class="reference internal" href="#modelo.BaseModel"><code
+                              class="docutils literal notranslate"><span class="pre">BaseModel</span></code></a></li>
+                        <li class="toctree-l4"><a class="reference internal" href="#modelo.Productos"><code
+                              class="docutils literal notranslate"><span class="pre">Productos</span></code></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="toctree-l1"><a class="reference internal" href="validar.html">Módulo Validar</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="vista.html">Módulo Vista</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" aria-label="Mobile navigation menu">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">DistribuidorApp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+            <ul class="wy-breadcrumbs">
+              <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+              <li class="breadcrumb-item active">Módulo Modelo</li>
+              <li class="wy-breadcrumbs-aside">
+                <a href="_sources/modelo.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+              </li>
+            </ul>
+            <hr />
+          </div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div itemprop="articleBody">
+
+              <section id="modulo-modelo">
+                <span id="module-modelo"></span>
+                <h1>Módulo Modelo<a class="headerlink" href="#modulo-modelo" title="Link to this heading"></a></h1>
+                <p>El módulo «modelo» contiene la clase <cite>Abmc</cite>, que se encarga de interactuar con una base de
+                  datos SQLite y realizar operaciones ABMC (Alta, Baja, Modificación y Consulta) en la tabla «Productos».
+                  Esta clase facilita el acceso y la gestión de los datos almacenados en la base de datos.</p>
+                <section id="clase-abmc">
+                  <h2>Clase Abmc<a class="headerlink" href="#clase-abmc" title="Link to this heading"></a></h2>
+                  <p>La clase <cite>Abmc</cite> proporciona una interfaz para llevar a cabo las siguientes operaciones:
+                  </p>
+                  <ul class="simple">
+                    <li>
+                      <p>Alta de un nuevo registro en la tabla «Productos» con información sobre un producto.</p>
+                    </li>
+                    <li>
+                      <p>Baja de un registro existente en la tabla «Productos» según el ID seleccionado.</p>
+                    </li>
+                    <li>
+                      <p>Modificación de los valores de un registro existente en la tabla «Productos».</p>
+                    </li>
+                    <li>
+                      <p>Consulta de registros que coinciden con una descripción proporcionada.</p>
+                    </li>
+                    <li>
+                      <p>Actualización del listado mostrado en la interfaz con todos los datos de la tabla «Productos».</p>
+                    </li>
+                  </ul>
+                  <section id="metodos-de-la-clase-abmc">
+                    <h3>Métodos de la Clase Abmc<a class="headerlink" href="#metodos-de-la-clase-abmc"
+                        title="Link to this heading"></a></h3>
+                    <ol class="arabic">
+                      <li>
+                        <p><strong>alta(descripcion, cantidad, precio, tree)</strong>:
+                          <br/>- Descripción: Agrega un nuevo registro a la tabla «Productos» con los valores proporcionados. Este campo debe completarse con caracteres alfanuméricos y no puede quedar vacío.
+                          <br/>- Parámetros:
+                        <blockquote>
+                          <div>
+                            <ul class="simple">
+                              <li>
+                                <p><cite>descripcion</cite> (str): La descripción del producto.</p>
+                              </li>
+                              <li>
+                                <p><cite>cantidad</cite> (float): La cantidad de unidades del producto.</p>
+                              </li>
+                              <li>
+                                <p><cite>precio</cite> (float): El precio del producto.</p>
+                              </li>
+                              <li>
+                                <p><cite>tree</cite> (ttk.Treeview): La lista de la interfaz donde se mostrarán los registros
+                                  actualizados.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </blockquote>
+                      </li>
+                      <li>
+                        <p><strong>baja(tree)</strong>:
+                          <br/>- Descripción: Elimina el registro seleccionado de la tabla «Productos».
+                          <br/>- Parámetros:
+                        </p>
+                        <blockquote>
+                          <div>
+                            <ul class="simple">
+                              <li>
+                                <p><cite>tree</cite> (ttk.Treeview): La vista de árbol donde se mostrarán los registros
+                                  actualizados.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </blockquote>
+                      </li>
+                      <li>
+                        <p><strong>modificar(descripcion, cantidad, precio, tree)</strong>:
+                          <br/>- Descripción: Actualiza los valores de un registro existente en la tabla «Productos».
+                          <br/>- Parámetros:
+                        </p>
+                        <blockquote>
+                          <div>
+                            <ul class="simple">
+                              <li>
+                                <p><cite>descripcion</cite> (str): La nueva descripción del producto.</p>
+                              </li>
+                              <li>
+                                <p><cite>cantidad</cite> (float): La nueva cantidad de unidades del producto.</p>
+                              </li>
+                              <li>
+                                <p><cite>precio</cite> (float): El nuevo precio del producto.</p>
+                              </li>
+                              <li>
+                                <p><cite>tree</cite> (ttk.Treeview): La vista de árbol donde se mostrarán los registros
+                                  actualizados.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </blockquote>
+                      </li>
+                      <li>
+                        <p><strong>consultar(descripcion, tree)</strong>:
+                          <br/>- Descripción: Realiza una consulta en la tabla «Productos» y muestra los resultados en la lista.
+                          <br/>- Parámetros:
+                        <blockquote>
+                          <div>
+                            <ul class="simple">
+                              <li>
+                                <p><cite>descripcion</cite> (str): La descripción a buscar.</p>
+                              </li>
+                              <li>
+                                <p><cite>tree</cite> (ttk.Treeview): La vista de árbol donde se mostrarán los resultados
+                                  de la consulta.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </blockquote>
+                      </li>
+                      <li>
+                        <p><strong>actualizar_treeview(tree)</strong>:
+                          <br/>- Descripción: Actualiza la lista con los datos más recientes de la tabla
+                          «Productos».
+                          <br/>- Parámetros:
+                        </p>
+                        <blockquote>
+                          <div>
+                            <ul class="simple">
+                              <li>
+                                <p><cite>tree</cite> (ttk.Treeview): La vista de árbol a actualizar.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </blockquote>
+                      </li>
+                    </ol>
+                    <dl class="py class" id="module-0">
+                      <dt class="sig sig-object py" id="modelo.Abmc">
+                        <em class="property"><span class="pre">class</span><span class="w"> </span></em><span
+                          class="sig-prename descclassname"><span class="pre">modelo.</span></span><span
+                          class="sig-name descname"><span class="pre">Abmc</span></span><a class="reference internal"
+                          href="_modules/modelo.html#Abmc"><span class="viewcode-link"><span
+                              class="pre">[fuente]</span></span></a><a class="headerlink" href="#modelo.Abmc"
+                          title="Link to this definition"></a>
+                      </dt>
+                      <dd>
+                        <p>Bases: <code
+                            class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code>
+                        </p>
+                        <dl class="py method">
+                          <dt class="sig sig-object py" id="modelo.Abmc.actualizar_treeview">
+                            <span class="sig-name descname"><span class="pre">actualizar_treeview</span></span><span
+                              class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                  class="pre">tree</span></span></em><span class="sig-paren">)</span><a
+                              class="reference internal" href="_modules/modelo.html#Abmc.actualizar_treeview"><span
+                                class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink"
+                              href="#modelo.Abmc.actualizar_treeview" title="Link to this definition"></a>
+                          </dt>
+                          <dd></dd>
+                        </dl>
+
+                        <dl class="py method">
+                          <dt class="sig sig-object py" id="modelo.Abmc.alta">
+                            <span class="sig-name descname"><span class="pre">alta</span></span><span
+                              class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                  class="pre">descripcion</span></span></em>, <em class="sig-param"><span
+                                class="n"><span class="pre">cantidad</span></span></em>, <em class="sig-param"><span
+                                class="n"><span class="pre">precio</span></span></em>, <em class="sig-param"><span
+                                class="n"><span class="pre">tree</span></span></em><span class="sig-paren">)</span><a
+                              class="reference internal" href="_modules/modelo.html#Abmc.alta"><span
+                                class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink"
+                              href="#modelo.Abmc.alta" title="Link to this definition"></a>
+                          </dt>
+                          <dd></dd>
+                        </dl>
+
+                        <dl class="py method">
+                          <dt class="sig sig-object py" id="modelo.Abmc.baja">
+                            <span class="sig-name descname"><span class="pre">baja</span></span><span
+                              class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                  class="pre">tree</span></span></em><span class="sig-paren">)</span><a
+                              class="reference internal" href="_modules/modelo.html#Abmc.baja"><span
+                                class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink"
+                              href="#modelo.Abmc.baja" title="Link to this definition"></a>
+                          </dt>
+                          <dd></dd>
+                        </dl>
+
+                        <dl class="py method">
+                          <dt class="sig sig-object py" id="modelo.Abmc.consultar">
+                            <span class="sig-name descname"><span class="pre">consultar</span></span><span
+                              class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                  class="pre">descripcion</span></span></em>, <em class="sig-param"><span
+                                class="n"><span class="pre">tree</span></span></em><span class="sig-paren">)</span><a
+                              class="reference internal" href="_modules/modelo.html#Abmc.consultar"><span
+                                class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink"
+                              href="#modelo.Abmc.consultar" title="Link to this definition"></a>
+                          </dt>
+                          <dd></dd>
+                        </dl>
+
+                        <dl class="py method">
+                          <dt class="sig sig-object py" id="modelo.Abmc.modificar">
+                            <span class="sig-name descname"><span class="pre">modificar</span></span><span
+                              class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                  class="pre">descripcion</span></span></em>, <em class="sig-param"><span
+                                class="n"><span class="pre">cantidad</span></span></em>, <em class="sig-param"><span
+                                class="n"><span class="pre">precio</span></span></em>, <em class="sig-param"><span
+                                class="n"><span class="pre">tree</span></span></em><span class="sig-paren">)</span><a
+                              class="reference internal" href="_modules/modelo.html#Abmc.modificar"><span
+                                class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink"
+                              href="#modelo.Abmc.modificar" title="Link to this definition"></a>
+                          </dt>
+                          <dd></dd>
+                        </dl>
+
+                      </dd>
+                    </dl>
+
+                    <dl class="py class">
+                      <dt class="sig sig-object py" id="modelo.BaseModel">
+                        <em class="property"><span class="pre">class</span><span class="w"> </span></em><span
+                          class="sig-prename descclassname"><span class="pre">modelo.</span></span><span
+                          class="sig-name descname"><span class="pre">BaseModel</span></span><span
+                          class="sig-paren">(</span><em class="sig-param"><span class="o"><span
+                              class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em
+                          class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span
+                              class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a
+                          class="reference internal" href="_modules/modelo.html#BaseModel"><span
+                            class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink"
+                          href="#modelo.BaseModel" title="Link to this definition"></a>
+                      </dt>
+                      <dd>
+                        <p>Bases: <code
+                            class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code>
+                        </p>
+
+                        <dl class="py attribute">
+                          <dt class="sig sig-object py" id="modelo.BaseModel.id">
+                            <span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span
+                                class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w">
+                              </span><span class="pre">&lt;AutoField:</span> <span
+                                class="pre">BaseModel.id&gt;</span></em><a class="headerlink"
+                              href="#modelo.BaseModel.id" title="Link to this definition"></a>
+                          </dt>
+                          <dd></dd>
+                        </dl>
+
+                      </dd>
+                    </dl>
+
+                    <dl class="py class">
+                      <dt class="sig sig-object py" id="modelo.Productos">
+                        <em class="property"><span class="pre">class</span><span class="w"> </span></em><span
+                          class="sig-prename descclassname"><span class="pre">modelo.</span></span><span
+                          class="sig-name descname"><span class="pre">Productos</span></span><span
+                          class="sig-paren">(</span><em class="sig-param"><span class="o"><span
+                              class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em
+                          class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span
+                              class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a
+                          class="reference internal" href="_modules/modelo.html#Productos"><span
+                            class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink"
+                          href="#modelo.Productos" title="Link to this definition"></a>
+                      </dt>
+                      <dd>
+                        <p>Bases: <a class="reference internal" href="#modelo.BaseModel" title="modelo.BaseModel"><code
+                              class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a>
+                        </p>
+
+
+                        <dl class="py attribute">
+                          <dt class="sig sig-object py" id="modelo.Productos.cantidad">
+                            <span class="sig-name descname"><span class="pre">cantidad</span></span><em
+                              class="property"><span class="w"> </span><span class="p"><span
+                                  class="pre">=</span></span><span class="w"> </span><span
+                                class="pre">&lt;FloatField:</span> <span
+                                class="pre">Productos.cantidad&gt;</span></em><a class="headerlink"
+                              href="#modelo.Productos.cantidad" title="Link to this definition"></a>
+                          </dt>
+                          <dd></dd>
+                        </dl>
+
+                        <dl class="py attribute">
+                          <dt class="sig sig-object py" id="modelo.Productos.descripcion">
+                            <span class="sig-name descname"><span class="pre">descripcion</span></span><em
+                              class="property"><span class="w"> </span><span class="p"><span
+                                  class="pre">=</span></span><span class="w"> </span><span
+                                class="pre">&lt;CharField:</span> <span
+                                class="pre">Productos.descripcion&gt;</span></em><a class="headerlink"
+                              href="#modelo.Productos.descripcion" title="Link to this definition"></a>
+                          </dt>
+                          <dd></dd>
+                        </dl>
+
+                        <dl class="py attribute">
+                          <dt class="sig sig-object py" id="modelo.Productos.id">
+                            <span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span
+                                class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w">
+                              </span><span class="pre">&lt;AutoField:</span> <span
+                                class="pre">Productos.id&gt;</span></em><a class="headerlink"
+                              href="#modelo.Productos.id" title="Link to this definition"></a>
+                          </dt>
+                          <dd></dd>
+                        </dl>
+
+                        <dl class="py attribute">
+                          <dt class="sig sig-object py" id="modelo.Productos.precio">
+                            <span class="sig-name descname"><span class="pre">precio</span></span><em
+                              class="property"><span class="w"> </span><span class="p"><span
+                                  class="pre">=</span></span><span class="w"> </span><span
+                                class="pre">&lt;FloatField:</span> <span class="pre">Productos.precio&gt;</span></em><a
+                              class="headerlink" href="#modelo.Productos.precio" title="Link to this definition"></a>
+                          </dt>
+                          <dd></dd>
+                        </dl>
+
+                      </dd>
+                    </dl>
+
+                  </section>
+                </section>
+              </section>
+
+
+            </div>
+          </div>
+          <footer>
+            <div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+              <a href="main.html" class="btn btn-neutral float-left" title="main module" accesskey="p" rel="prev"><span
+                  class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+              <a href="validar.html" class="btn btn-neutral float-right" title="validar module" accesskey="n"
+                rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+            </div>
+
+            <hr />
+
+            <div role="contentinfo">
+              <p>&#169; Derechos de autor 2023, Rodriguez_y_Sirne.</p>
+            </div>
+
+            Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+            <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+            proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+          </footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+    });
+  </script>
+
+</body>
+
+</html>
