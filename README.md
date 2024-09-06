@@ -60,8 +60,4 @@ Now you're ready to start using DistribuidorApp to efficiently manage your produ
 - validar
 - vista
 
-## Indices and Tables
-
-* [General Index](#genindex)
-* [Module Index](#modindex)
-* [Search](#search)
+## Find the complete and interactive documentation in spanish [here](https://github.com/AgustinNR/distribuidor_app_abmc/blob/main/DistribuidorApp/docs/_build/html/index.html)!
