@@ -1,0 +1,13 @@
+Diplomatura en Python - UTN FRBA
+
+Equipo:
+RODRIGUEZ, Agustín Nahuel - agurodri96@hotmail.com
+SIRNE, Ezequiel - ezequielsirne@gmail.com
+
+Entrega Final - Nivel Avanzado
+
+1º Iniciar el servidor desde server.py
+2ª Ejecutar main.py
+
+Gracias!
+Saludos.
