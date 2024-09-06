@@ -1,5 +1,7 @@
 # Welcome to DistribuidorApp Documentation!
 
+<img src="./DistribuidorApp/img/interface.png" alt="DistribuidorApp Preview" width="500" height="300">
+
 ## Description
 
 The "DistribuidorApp" is a product purchase registration and management tool designed to facilitate tracking business transactions. It allows users to enter detailed information about purchases, including product name, quantity, and unit price. With DistribuidorApp, users can keep an organized record of their purchases and perform various operations related to product management.
@@ -61,3 +63,5 @@ Now you're ready to start using DistribuidorApp to efficiently manage your produ
 - vista
 
 ## Find the complete and interactive documentation in spanish [here](https://github.com/AgustinNR/distribuidor_app_abmc/blob/main/DistribuidorApp/docs/_build/html/index.html)!
+
+![DistribuidorApp Documentation](./DistribuidorApp/img/index_docu.png)
